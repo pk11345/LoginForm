@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+}
+.Fullscreen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .fullImg{
+    background-image: url(img/background.jpg);
+    width: 18vw;
+    height: 18vh;
+    background-size:cover;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: growBackground 1.7s ease forwards;
+ }
+ .centerLOGO{
+    height: 0px;
+    animation: LOGOAppear 1.7s ease forwards 1s;
+ }
+ @keyframes growBackground {
+    0% {
+        width: 18vw;
+        height: 18vh;
+    }
+    100% {
+        width: 98vw;
+        height: 98vh;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+}
+@keyframes LOGOAppear{
+0%{
+    height: 0px;
+}
+50%{
+    height: 80px;
+    
+}
+100%{
+    height: 80px;
+    top: 0;
+    left: 0;
+}
+}
+
+.containers{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    /* background-color: green; */
+    width: 98vw;
+    height: 98vh;
+    border-radius: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+
+  }
+  .column{
+    width: 50%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   
+  }
+  .left-column{
+    
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  .row1{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .text1{
+    color: rgba(128, 128, 128, 0.671);
+    animation: coming 2s ease 2s;
+  }
+  @keyframes coming{
+    0%{
+        margin-right: -500px;
+    }
+    100%{
+        margin-right: 0;
+    }
+  }
+
+  .enroll{
+    display: flex;
+    margin-right: 5px;
+    gap: 10px;
+    align-items: center;
+    
+  }
+  .enroll button{
+    width: 80px;
+    padding: 5px 5px 5px 5px;
+    color: green;
+    background-color: white;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .column2{
+    width: 100%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 40px;
+   animation: coming1 2s ease 2s;
+  }
+  @keyframes coming1{
+    0%{
+        margin-bottom: 500px;
+    }
+    100%{
+        margin-bottom: 0;
+    }
+  }
+  .text2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    
+  }
+  .column2 h1{
+    font-size: 40px;
+  }
+  .column p{
+    color: rgba(128, 128, 128, 0.671);
+  }
+/* .login{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+} */
+  form{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 15px;
+  }
+  .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  label{
+    font-size: 20px;
+  }
+  input{
+    width: 300px;
+    height: 20px;
+    padding: 10px 10px 10px 10px;
+  }
+ 
+.submit{
+    background-color:gray;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .texts{
+    display: flex;
+    justify-content: center;
+    color: green;
+    margin-top: 15px;
+    gap: 5px;
+  }
+  .footerLeft{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: rgba(128, 128, 128, 0.596);
+  }
+  .right-column{
+    background-image: url(img/background.jpg);
+    object-fit: cover;
+    background-size:cover;
+   
+    background-position: center;
+    border-radius: 20px;
+  }
+
+  /* Media query for devices with width <= 768px (Tablets and small devices) */
+@media (max-width: 768px) {
+    .containers {
+      flex-direction: column;
+      height: auto;
+    }
+    .container {
+      flex-direction: column;
+      width: 100vw;
+      height: auto;
+      padding: 10px;
+    }
+    .column {
+      width: 100%;
+      padding: 20px;
+    }
+    .left-column,
+    .right-column {
+      border-radius: 0;
+    }
+    .fullImg {
+      width: 60vw;
+      height: 20vh;
+    }
+    .centerLOGO {
+      height: 50px;
+    }
+    .input-group input {
+      width: 100%;
+    }
+    .enroll button {
+      width: auto;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Change to column for smaller screens */
+    }
+
+    .column {
+        width: 100%; /* Full width for each column */
+    }
+
+    .right-column {
+        border-radius: 0; /* Remove border radius for smaller screens */
+        height: 300px;
+    }
+}
